@@ -33,6 +33,7 @@
   <Project Path="Unity.SurfaceCache.Runtime.csproj" />
   <Project Path="Unity.GraphAuthoring.Editor.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="Unity.PathTracing.Editor.csproj" />
@@ -46,7 +47,6 @@
   <Project Path="Unity.InputSystem.ForUI.Editor.csproj" />
   <Project Path="Unity.Collections.Tests.CoreCLR.InternalJobNestedPrivate.csproj" />
   <Project Path="Unity.Collections.Tests.CoreCLR.ProtectedJobNested.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.ObjectDispatcher.Runtime.csproj" />
   <Project Path="Unity.Burst.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.RenderPipelines.Core.Editor.csproj" />
@@ -75,13 +75,13 @@
   <Project Path="Unity.InputSystem.ForUI.Player.csproj" />
   <Project Path="Unity.TextMeshPro.Player.csproj" />
   <Project Path="Unity.SurfaceCache.Runtime.Player.csproj" />
+  <Project Path="Assembly-CSharp.Player.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.Player.csproj" />
   <Project Path="Unity.Profiling.Core.Player.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.RenderPipelines.Core.Runtime.Shared.Player.csproj" />
   <Project Path="Unity.Collections.Tests.CoreCLR.PrivateJobNested.Player.csproj" />
   <Project Path="Unity.Collections.Tests.CoreCLR.InternalJobNestedPrivate.Player.csproj" />
   <Project Path="Unity.Collections.Tests.CoreCLR.ProtectedJobNested.Player.csproj" />
-  <Project Path="Assembly-CSharp.Player.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.ObjectDispatcher.Runtime.Player.csproj" />
   <Project Path="Unity.Burst.Player.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Config.Runtime.Player.csproj" />
