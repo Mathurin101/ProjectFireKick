@@ -39,8 +39,8 @@
   <Project Path="UnityEditor.UI.Analytics.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
   <Project Path="Unity.ShaderGraph.Utilities.csproj" />
-  <Project Path="Unity.Profiling.Core.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Unity.Profiling.Core.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.RenderPipelines.Core.Runtime.Shared.csproj" />
   <Project Path="Unity.Collections.Tests.CoreCLR.PrivateJobNested.csproj" />
   <Project Path="Unity.PlasticSCM.Editor.Entities.csproj" />
@@ -76,8 +76,8 @@
   <Project Path="Unity.TextMeshPro.Player.csproj" />
   <Project Path="Unity.SurfaceCache.Runtime.Player.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.Player.csproj" />
-  <Project Path="Unity.Profiling.Core.Player.csproj" />
   <Project Path="Assembly-CSharp.Player.csproj" />
+  <Project Path="Unity.Profiling.Core.Player.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.RenderPipelines.Core.Runtime.Shared.Player.csproj" />
   <Project Path="Unity.Collections.Tests.CoreCLR.PrivateJobNested.Player.csproj" />
   <Project Path="Unity.Collections.Tests.CoreCLR.InternalJobNestedPrivate.Player.csproj" />

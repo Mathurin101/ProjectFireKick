@@ -29,7 +29,8 @@ public class Enemy : MonoBehaviour
     {
         if (ShootCoolDown <= ShootingTimer)
         {
-            Instantiate(Fireball, transform); //, transform.forward
+
+            Instantiate(Fireball, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), transform.rotation); //, transform.forward
 
             //resets the shootingTimer
             ShootingTimer = 0;

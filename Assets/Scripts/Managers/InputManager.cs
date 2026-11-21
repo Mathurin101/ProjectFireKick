@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ImputManager : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
 
-    public static ImputManager instance;
+    public static InputManager instance;
 
     [SerializeField] InputActionAsset InputActions;
     [SerializeField] string ActionMapName;
