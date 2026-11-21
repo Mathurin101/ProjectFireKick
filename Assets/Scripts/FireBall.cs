@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
+    [SerializeField] int Damage;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,8 +18,8 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //doesn't hit enemy
-        if (other.CompareTag("Enemy"))
+        //doesn't hit enemy or self
+        if (other.CompareTag("Enemy") || other.CompareTag("Projectile"))
         {
             return;
         }
@@ -33,6 +35,10 @@ public class FireBall : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("it touched the player");
+
+            IDamage PlayerHP = other.GetComponent<IDamage>();
+
+            PlayerHP.TakeDamage(Damage);
         }
 
         Destroy(gameObject);

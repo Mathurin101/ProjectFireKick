@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1571279047339474355}
   m_Layer: 0
   m_Name: FireBall
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde81fb89b5ef924994204dffa142b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireBall
+  Damage: 0
 --- !u!33 &6162469475583765864
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,9 +7,13 @@ public class Player : MonoBehaviour, IDamage
 
     [Header("Stats")]
     [SerializeField] int HP = 3;
+    [SerializeField] float kickBoxDuration = 1.6f;
 
-    private bool IsHit;
-    private bool Kicked;
+    [Header("GameObjects")]
+    [SerializeField] GameObject KickBox;
+
+    private bool IsHit = false;
+    private bool HasKicked = true;
     private InputAction KickAction;
 
     private void Awake()
@@ -19,7 +24,7 @@ public class Player : MonoBehaviour, IDamage
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        KickBox.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,10 +37,17 @@ public class Player : MonoBehaviour, IDamage
 
     void Kicking()
     {
-        if (KickAction.WasPressedThisFrame())//&& (IsHit || Kicked)
+        if (KickAction.WasPressedThisFrame() && (IsHit || HasKicked))
         {
             Debug.Log("Player kicked");
 
+            //make the hit box active
+            KickBox.SetActive(true);
+
+            //check to see if it hit the fire ball
+            HasKicked = KickBox.GetComponent<KickBoxAction>().ItHitBall;
+            IsHit = false;
+            StartCoroutine(MakeKickActive());
         }
     }
 
@@ -43,6 +55,15 @@ public class Player : MonoBehaviour, IDamage
     public void TakeDamage(int DamageTaken)
     {
         HP -= DamageTaken;
+        IsHit = true;
+
+        Debug.Log("HP: " + HP);
     }
 
+    IEnumerator MakeKickActive()
+    {
+        yield return new WaitForSeconds(kickBoxDuration);
+
+        KickBox.SetActive(false);
+    }
 }

@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float BallSpeed = 1f;
     [SerializeField] float ShootCoolDown = 1f;
 
+    [Header("Debug")]
+    [SerializeField] bool CanShootForever = true;
 
     private float ShootingTimer = 0;
 
@@ -27,7 +29,7 @@ public class Enemy : MonoBehaviour
 
     void SpawnFireballs()
     {
-        if (ShootCoolDown <= ShootingTimer)
+        if (ShootCoolDown <= ShootingTimer && CanShootForever)
         {
 
             Instantiate(Fireball, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), transform.rotation); //, transform.forward
