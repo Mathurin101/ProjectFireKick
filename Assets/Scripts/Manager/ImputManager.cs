@@ -27,9 +27,14 @@ public class ImputManager : MonoBehaviour
         }
     }
 
+    public void SetActionMapName(string MapName)
+    {
+        ActionMapName = MapName;
+    }
+
     public InputAction GetAction(string ActionName)
     {
-        return InputActions.FindAction(ActionName);
+        return InputActions.FindActionMap(ActionMapName).FindAction(ActionName);
     }
 
 }
