@@ -810,6 +810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   Fireball: {fileID: 7654138498143825568, guid: fdec3a204a8674d4e9d31715b85e5b6b, type: 3}
+  BallSpeed: 1
+  ShootCoolDown: 3
 --- !u!1 &1717426204
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +932,7 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 943150814}
   - {fileID: 1717426208}
   - {fileID: 514120886}
   - {fileID: 1537367751}
-  - {fileID: 943150814}
