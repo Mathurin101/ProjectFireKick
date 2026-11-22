@@ -1,8 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    [SerializeField] TextMeshProUGUI KickScore;
 
     private int NumberOfFiresKicked;
 
@@ -17,13 +20,13 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        KickScore.text = "0";
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("Kicked: " + GetFireKickedCounter() + " times");
+
     }
 
     public int GetFireKickedCounter()
@@ -34,5 +37,6 @@ public class GameManager : MonoBehaviour
     public void IncreaseFireKickedCounter()
     {
         NumberOfFiresKicked++;
+        KickScore.text = NumberOfFiresKicked.ToString();
     }
 }

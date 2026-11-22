@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,8 +10,10 @@ public class Player : MonoBehaviour, IDamage
     [SerializeField] int HP = 3;
     [SerializeField] float kickBoxDuration = 1.6f;
 
+
     [Header("GameObjects")]
     [SerializeField] GameObject KickBox;
+    [SerializeField] TextMeshProUGUI HPDisplay;
 
     private bool IsHit = false;
     private bool HasKicked = true;
@@ -25,6 +28,7 @@ public class Player : MonoBehaviour, IDamage
     void Start()
     {
         KickBox.SetActive(false);
+        HPDisplay.text = HP.ToString();
     }
 
     // Update is called once per frame
@@ -32,7 +36,7 @@ public class Player : MonoBehaviour, IDamage
     {
 
         Kicking();
-        Debug.Log("HP: " + HP);
+
     }
 
 
@@ -57,6 +61,8 @@ public class Player : MonoBehaviour, IDamage
     {
         HP -= DamageTaken;
         IsHit = true;
+
+        HPDisplay.text = HP.ToString();
     }
 
     IEnumerator MakeKickActive()

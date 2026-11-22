@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
 {
 
     [SerializeField] GameObject Fireball;
-    [SerializeField] float BallSpeed = 1f;
+    //[SerializeField] float BallSpeed = 1f;
     [SerializeField] float ShootCoolDown = 1f;
 
     [Header("Debug")]
