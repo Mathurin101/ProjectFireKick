@@ -4,9 +4,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    private int NumberOfFiresKicked;
+
     void Awake()
     {
-        if (instance)
+        if (!instance)
         {
             instance = this;
         }
@@ -21,6 +23,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("Kicked: " + GetFireKickedCounter() + " times");
+    }
 
+    public int GetFireKickedCounter()
+    {
+        return NumberOfFiresKicked;
+    }
+
+    public void IncreaseFireKickedCounter()
+    {
+        NumberOfFiresKicked++;
     }
 }

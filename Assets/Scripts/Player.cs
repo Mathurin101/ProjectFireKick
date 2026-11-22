@@ -32,6 +32,7 @@ public class Player : MonoBehaviour, IDamage
     {
 
         Kicking();
+        Debug.Log("HP: " + HP);
     }
 
 
@@ -56,14 +57,11 @@ public class Player : MonoBehaviour, IDamage
     {
         HP -= DamageTaken;
         IsHit = true;
-
-        Debug.Log("HP: " + HP);
     }
 
     IEnumerator MakeKickActive()
     {
         yield return new WaitForSeconds(kickBoxDuration);
-
         KickBox.SetActive(false);
     }
 }

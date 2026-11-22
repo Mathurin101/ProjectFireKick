@@ -21,6 +21,7 @@ public class KickBoxAction : MonoBehaviour
         if (other.CompareTag("Projectile"))
         {
             ItHitBall = true;
+            GameManager.instance.IncreaseFireKickedCounter();
         }
     }
 }
