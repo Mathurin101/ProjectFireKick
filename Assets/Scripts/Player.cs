@@ -44,7 +44,8 @@ public class Player : MonoBehaviour, IDamage
     {
         if (KickAction.WasPressedThisFrame() && (IsHit || HasKicked))
         {
-            Debug.Log("Player kicked");
+            // Debug.Log("Player kicked");
+            Debug.Log("Kick is " + InputManager.instance.GetActionName(KickAction));
 
             //make the hit box active
             KickBox.SetActive(true);

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI KickScore;
 
     private int NumberOfFiresKicked;
+    private int NumberOfFiresKickedStreak;
 
     void Awake()
     {
@@ -39,4 +40,9 @@ public class GameManager : MonoBehaviour
         NumberOfFiresKicked++;
         KickScore.text = NumberOfFiresKicked.ToString();
     }
+    //public void IncreaseFireKickedStreak()
+    //{
+    //    NumberOfFiresKickedStreak++;
+    //    //KickScore.text = NumberOfFiresKickedStreak.ToString();
+    //}
 }
