@@ -879,7 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   HP: 3
-  kickBoxDuration: 0.5
+  kickBoxDuration: 0.1
   KickBox: {fileID: 196344015}
   HPDisplay: {fileID: 1256968955}
 --- !u!1 &549493052
@@ -1526,9 +1526,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   Fireball: {fileID: 7654138498143825568, guid: fdec3a204a8674d4e9d31715b85e5b6b, type: 3}
-  BallSpeed: 1
-  ShootCoolDown: 1
+  MinFireBallsCD: 0.1
+  MaxFireBallsCD: 5
   CanShootForever: 1
+  FireBallsPerRound: 10
 --- !u!1 &1668894973
 GameObject:
   m_ObjectHideFlags: 0
